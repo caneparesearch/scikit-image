@@ -534,11 +534,11 @@ def blob_log(image, min_sigma=1, max_sigma=50, num_sigma=10, threshold=.2,
 
     return _prune_blobs(lm, overlap, sigma_dim=sigma_dim)
 
-def blob_glog(image, min_sigma=1, max_sigma=50, num_sigma=10, threshold=.2,
+def blob_alog(image, min_sigma=1, max_sigma=50, num_sigma=10, threshold=.2,
              overlap=.5, log_scale=False, *, exclude_border=False):
     r"""Finds blobs in the given grayscale image.
 
-    Blobs are found using the Generalized Laplacian of Gaussian (gLoG) method.
+    Blobs are found using the anisotropic Laplacian of Gaussian (aLoG) method.
     For each blob found, the method returns its coordinates and the standard
     deviation of the Gaussian kernel that detected the blob. This 
     means we find iterative anisotropic gaussian recussively.

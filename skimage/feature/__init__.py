@@ -24,7 +24,7 @@ from .censure import CENSURE
 from .orb import ORB
 from .match import match_descriptors
 from .util import plot_matches
-from .blob import blob_dog, blob_log, blob_doh, blob_glog
+from .blob import blob_dog, blob_log, blob_doh, blob_alog
 from .haar import (haar_like_feature, haar_like_feature_coord,
                    draw_haar_like_feature)
 from ._basic_features import multiscale_basic_features
@@ -88,7 +88,7 @@ __all__ = ['canny',
            'blob_dog',
            'blob_doh',
            'blob_log',
-           'blob_glog'
+           'blob_alog'
            'haar_like_feature',
            'haar_like_feature_coord',
            'draw_haar_like_feature',
