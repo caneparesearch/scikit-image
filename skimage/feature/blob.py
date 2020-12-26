@@ -651,8 +651,11 @@ def blob_alog(image, min_sigma=1, max_sigma=50, num_sigma=10, threshold=.2,
     # Generating an anisotrpic sigma list
     sigma_list = np.empty([0,2])
     print ("preparing sigma list")
-    for i in temp_sigma_list:
-        for j in temp_sigma_list:
+    for counter,i in enumerate(temp_sigma_list):
+        #counter_j = 0 if counter-3 < 0 else counter-3
+        #j_temp_sigma_list = np.array(temp_sigma_list[counter_j :counter+3])
+        #for inner_count, j in enumerate(j_temp_sigma_list):
+        for inner_count, j in enumerate(temp_sigma_list):
             sigma_list = np.append(sigma_list,[[i.item(0), j.item(0)]],axis=0)
     # computing gaussian laplace
     # average s**2 provides scale invariance
